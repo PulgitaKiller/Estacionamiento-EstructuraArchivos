@@ -72,7 +72,7 @@ int main(){
 		printf("|      (1) GENERAR TICKET     (2)PAGAR         |\n");
 		printf("|                                       2.0 ver|\n");
 		printf("|==============================================|\n\n");
-		printf("\tSELECCIONE UNA OPCI”N: ");
+		printf("\tSELECCIONE UNA OPCI√ìN: ");
 		fflush(stdin);
 		opc = getche();
 		
@@ -83,7 +83,7 @@ int main(){
 				printf("|\t\tConfiguraciones                |\n");
 				printf("|==============================================|\n");
 				printf("|                                              |\n");
-				printf("| ContraseÒa:                                  |\n");
+				printf("| Contrase√±a:                                  |\n");
 				scanf("%d",& usuario);
 				printf("|                                              |\n");
 				printf("|==============================================|\n");
@@ -99,7 +99,7 @@ int main(){
 					printf("|                             (0) SALIR        |\n");
 					printf("|                                              |\n");
 					printf("|==============================================|\n\n");
-					printf("\tSELECCIONE UNA OPCI”N: ");
+					printf("\tSELECCIONE UNA OPCI√ìN: ");
 					fflush(stdin);
 					opc = getche();
 					
@@ -115,7 +115,7 @@ int main(){
 							printf("|\t\tConfiguraciones                |\n");
 							printf("|==============================================|\n");	
 							while(fread(&lugar, rectam, 1, storage) == 1){
-								printf("-N˙mero de Ticket: %d \n-Matricula: %d   \n-Entrada: %d \n", lugar.ticketID, lugar.autoID, lugar.entradaID);
+								printf("-N√∫mero de Ticket: %d \n-Matricula: %d   \n-Entrada: %d \n", lugar.ticketID, lugar.autoID, lugar.entradaID);
 								printf("|                                              |\n");
 								printf("|==============================================|\n\n");
 							}
@@ -166,12 +166,12 @@ int main(){
 				printf("|==============================================|\n");
 				printf("|                                              |\n");
 				//Registro Matricula
-				printf("| Ingrese el N˙mero de Matricula:              |\n");
+				printf("| Ingrese el N√∫mero de Matricula:              |\n");
 				scanf("%d",& lugar.autoID);
 				//Asigancion ID Ticket por random
 				printf("|                                              |\n");
 				lugar.ticketID = rand()& 979 - 20;
-				printf("| Su N˙mero de Ticket es: %d                   |", lugar.ticketID);
+				printf("| Su N√∫mero de Ticket es: %d                   |", lugar.ticketID);
 				//Hora de Entrada
 				printf("\n|                                              |\n");
 				printf("| Ingrese Hora de Entrada(24hrs):              |\n");
@@ -200,7 +200,7 @@ int main(){
 				printf("\n|                   PAGAR                      |\n");
 				printf("|==============================================|\n");
 				printf("|                        PAGO X HORA = %f    |\n", coste);
-				printf("| Ingrese el N˙mero de Ticket:                 |\n");
+				printf("| Ingrese el N√∫mero de Ticket:                 |\n");
 				scanf("%d",& ticketNID);
 				printf("|                                              |\n");
 				rewind(storage);
@@ -209,7 +209,7 @@ int main(){
 						printf("| Ingrese el Tiempo(24hrs):                    |\n");
 						scanf("%d",& horaS);
 						if(horaS > 24){
-							printf("|  °EL COSTO AUMENTO POR DURAR MAS DE UN DÕA!  |\n");
+							printf("|  ¬°EL COSTO AUMENTO POR DURAR MAS DE UN D√çA!  |\n");
 							costeF = horaS * (coste + 25);
 							printf("            Pago a Realizar: %f              \n", costeF);
 							printf("|                                              |\n");
@@ -220,7 +220,7 @@ int main(){
 							"   Matricula: %d        Numero Ticket: %d      \n"
 							"            Hora Entrada: %d                  \n"
 							"            Pago realizado: %f                \n"
-							"                °PAGADO!                      \n"
+							"                ¬°PAGADO!                      \n"
 							"|==============================================|\n"
 							, lugar.autoID, lugar.ticketID, lugar.entradaID, costeF);
 							lugar.ticketID = NULL;
@@ -238,7 +238,7 @@ int main(){
 							"   Matricula: %d        Numero Ticket: %d      \n"
 							"            Hora Entrada: %d                  \n"
 							"            Pago realizado: %f                \n"
-							"                °PAGADO!                      \n"
+							"                ¬°PAGADO!                      \n"
 							"|==============================================|\n"
 							, lugar.autoID, lugar.ticketID, lugar.entradaID, costeF);
 							lugar.ticketID = NULL;
@@ -248,7 +248,7 @@ int main(){
 						}
 					}
 					if(ticketNID != lugar.ticketID){
-						printf("\n\t °ERROR! \nEl N˙mero de Ticket no existe \n\n");
+						printf("\n\t ¬°ERROR! \nEl N√∫mero de Ticket no existe \n\n");
 						system("PAUSE");
 						break;
 					}
